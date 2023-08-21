@@ -1,0 +1,11 @@
+*.md
+build
+yarn.lock
+
+.env*
+/.next/
+/out/
+
+/build
+
+/.yarn/
