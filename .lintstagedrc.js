@@ -9,6 +9,7 @@ module.exports = {
   "src/**/*.{js,jsx,ts,tsx}": [
     () => "tsc --incremental false --noEmit",
     buildEslintCommand,
-    "prettier --write"
+    "prettier --write",
+    "jest --findRelatedTests --passWithNoTests",
   ],
 }
