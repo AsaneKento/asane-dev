@@ -1,16 +1,8 @@
-"use client"
-
-import { type ReactElement, useState, useCallback } from "react"
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
+import { type ReactElement } from "react"
 import Link from "next/link"
+import { DropDownMenu } from "./components/DropDownMenu"
 
 export function Header(): ReactElement {
-  const [open, setOpen] = useState(false)
-
-  const handleClose = useCallback(() => {
-    setOpen(!open)
-  }, [open])
-
   return (
     <div
       className={
@@ -22,18 +14,7 @@ export function Header(): ReactElement {
           Asane
         </Link>
       </div>
-      <div>
-        <button
-          className={"daisy-btn daisy-btn-square daisy-btn-ghost"}
-          onClick={handleClose}
-        >
-          {open ? (
-            <XMarkIcon aria-label={"close-icon"} className={"h-8 w-8"} />
-          ) : (
-            <Bars3Icon aria-label={"open-icon"} className={"h-8 w-8"} />
-          )}
-        </button>
-      </div>
+      <DropDownMenu />
     </div>
   )
 }
