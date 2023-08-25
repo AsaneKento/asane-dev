@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        base: "0px 3px 10px rgb(230,231,232,0.2)",
+      },
+      dropShadow: {
+        base: "0px 2px 2px rgb(230,231,232,0.2)",
+      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],

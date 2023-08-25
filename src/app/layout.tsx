@@ -1,4 +1,5 @@
 import type { ReactElement } from "react"
+import { Layout } from "~/components/Layout/Layout"
 import type { Metadata } from "next"
 import "./globals.css"
 
@@ -14,7 +15,9 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang={"ja"}>
-      <body>{children}</body>
+      <body className={"m-auto max-w-7xl"}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   )
 }
