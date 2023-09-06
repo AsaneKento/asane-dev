@@ -1,5 +1,6 @@
 import type { ReactElement } from "react"
 import type { Metadata } from "next"
+import "./global.css"
 
 export const metadata: Metadata = {
   title: "Asane",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang={"ja"}>
-      <body className={"m-auto max-w-7xl"}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

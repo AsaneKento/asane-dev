@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint -f stylish",
     "lint:fix": "next lint --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install",
+    "husky": "husky install",
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "panda": "panda codegen"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -31,6 +32,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.14.0",
     "@storybook/addon-essentials": "^7.3.2",
     "@storybook/addon-interactions": "^7.3.2",
     "@storybook/addon-links": "^7.3.2",

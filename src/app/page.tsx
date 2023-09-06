@@ -1,9 +1,12 @@
-import { type ReactElement } from "react"
+import type { ReactElement } from "react"
+import { css } from "~/styled-system/css"
 
 export default function Home(): ReactElement {
   return (
-    <>
-      <h1>Sample</h1>
-    </>
+    <div
+      className={css({ fontSize: "2xl", fontWeight: "bold", margin: "30px" })}
+    >
+      Hello World!
+    </div>
   )
 }
