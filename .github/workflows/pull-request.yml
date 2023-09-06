@@ -19,7 +19,7 @@ jobs:
           cache: npm
           cache-dependency-path: ./package-lock.json
       - name: Install package
-        run: npm ci
+        run: npm ci && npm run panda
       - uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
