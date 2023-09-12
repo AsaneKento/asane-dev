@@ -14,7 +14,7 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang={"ja"}>
-      <body className={"m-auto max-w-7xl"}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
