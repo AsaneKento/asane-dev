@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from "react"
-import { cva } from "~/styled-system/css"
-import { styled } from "~/styled-system/jsx"
+import { css, cva } from "~/styled-system/css"
+import type { SystemStyleObject } from "~/styled-system/types"
 
 const buttonRecipe = cva({
   base: {
@@ -89,20 +89,25 @@ const buttonRecipe = cva({
   },
 })
 
-const ButtonComponent = styled("button", buttonRecipe)
-
 interface ButtonProps {
   children: ReactNode
   variant?: "text" | "contained" | "outlined"
   size?: "medium" | "small" | "large"
   color?: "primary" | "secondary" | "info" | "success" | "warning" | "error"
+  css?: SystemStyleObject
 }
 
 export function Button(props: ButtonProps): ReactElement {
-  const { children, variant, size, color } = props
-  return (
-    <ButtonComponent variant={variant} size={size} color={color}>
-      {children}
-    </ButtonComponent>
+  const { children, variant, size, color, css: cssProps } = props
+
+  const className = css(
+    buttonRecipe.raw({
+      color: color,
+      variant: variant,
+      size: size,
+    }),
+    cssProps,
   )
+
+  return <button className={className}>{children}</button>
 }

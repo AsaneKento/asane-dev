@@ -3,6 +3,7 @@ import { defineConfig } from "@pandacss/dev"
 export default defineConfig({
   jsxFramework: "react",
   preflight: true,
+  hash: { "cssVar": false, "className": true },
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
   theme: {
