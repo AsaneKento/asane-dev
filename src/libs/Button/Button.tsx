@@ -9,7 +9,11 @@ const buttonRecipe = cva({
   },
   variants: {
     variant: {
-      text: {},
+      text: {
+        _disabled: {
+          color: "base100",
+        },
+      },
       contained: {
         _disabled: {
           bgColor: "base100",
@@ -18,7 +22,7 @@ const buttonRecipe = cva({
       outlined: {
         border: "solid 0.1rem",
         _disabled: {
-          border: "base100",
+          color: "base100",
         },
       },
     },
@@ -94,11 +98,21 @@ interface ButtonProps {
   variant?: "text" | "contained" | "outlined"
   size?: "medium" | "small" | "large"
   color?: "primary" | "secondary" | "info" | "success" | "warning" | "error"
+  disabled?: boolean
   css?: SystemStyleObject
+  onClick?: () => void
 }
 
 export function Button(props: ButtonProps): ReactElement {
-  const { children, variant, size, color, css: cssProps } = props
+  const {
+    children,
+    variant,
+    size,
+    color,
+    disabled,
+    onClick: handleClick,
+    css: cssProps,
+  } = props
 
   const className = css(
     buttonRecipe.raw({
@@ -109,5 +123,9 @@ export function Button(props: ButtonProps): ReactElement {
     cssProps,
   )
 
-  return <button className={className}>{children}</button>
+  return (
+    <button className={className} disabled={disabled} onClick={handleClick}>
+      {children}
+    </button>
+  )
 }
