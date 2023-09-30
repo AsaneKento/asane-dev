@@ -3,7 +3,7 @@ import { defineConfig } from "@pandacss/dev"
 export default defineConfig({
   jsxFramework: "react",
   preflight: true,
-  hash: { "cssVar": false, "className": true },
+  hash: { cssVar: false, className: true },
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
   theme: {
@@ -57,6 +57,7 @@ export default defineConfig({
           },
         },
         zIndex: {
+          appbar: { value: 1100 },
           drawer: { value: 1200 },
           modal: { value: 1300 },
           snackbar: { value: 1400 },
@@ -66,12 +67,12 @@ export default defineConfig({
   },
   globalCss: {
     html: {
-      h: 'full',
+      h: "full",
+      bgColor: "base",
+      color: "white",
     },
     body: {
-      h: 'full',
-      bgColor: 'base',
-      color: 'white'
+      h: "full",
     },
   },
   outdir: "./src/styled-system",
