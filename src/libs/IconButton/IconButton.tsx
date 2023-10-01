@@ -6,6 +6,7 @@ const iconButtonRecipe = cva({
   base: {
     cursor: "pointer",
     rounded: "sm",
+    verticalAlign: "middle",
   },
   variants: {
     variant: {
