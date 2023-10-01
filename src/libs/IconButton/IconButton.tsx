@@ -2,10 +2,11 @@ import type { ReactElement, ReactNode } from "react"
 import { css, cva } from "~/styled-system/css"
 import type { SystemStyleObject } from "~/styled-system/types"
 
-const buttonRecipe = cva({
+const iconButtonRecipe = cva({
   base: {
     cursor: "pointer",
     rounded: "sm",
+    verticalAlign: "middle",
   },
   variants: {
     variant: {
@@ -54,19 +55,16 @@ const buttonRecipe = cva({
     },
     size: {
       small: {
-        fontSize: "sm",
-        px: "2",
-        py: "1",
+        w: 6,
+        h: 6,
       },
       medium: {
-        fontSize: "md",
-        px: "4",
-        py: "1.5",
+        w: 8,
+        h: 8,
       },
       large: {
-        fontSize: "xl",
-        px: "5",
-        py: "1.5",
+        w: 10,
+        h: 10,
       },
     },
   },
@@ -93,31 +91,31 @@ const buttonRecipe = cva({
   },
 })
 
-interface ButtonProps {
-  children: ReactNode
+interface IconButtonProps {
   variant?: "text" | "contained" | "outlined"
   size?: "medium" | "small" | "large"
   color?: "primary" | "secondary" | "info" | "success" | "warning" | "error"
   disabled?: boolean
+  children: ReactNode
   css?: SystemStyleObject
   onClick?: () => void
 }
 
-export function Button(props: ButtonProps): ReactElement {
+export function IconButton(props: IconButtonProps): ReactElement {
   const {
-    children,
     variant,
     size,
     color,
+    children,
     disabled,
     onClick: handleClick,
     css: cssProps,
   } = props
 
   const className = css(
-    buttonRecipe.raw({
-      color: color,
+    iconButtonRecipe.raw({
       variant: variant,
+      color: color,
       size: size,
     }),
     cssProps,
