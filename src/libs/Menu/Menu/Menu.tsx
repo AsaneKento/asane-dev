@@ -29,7 +29,9 @@ export function Menu(props: MenuProps): ReactElement {
 
   useEffect(() => {
     const handleOutsideClick = (): void => {
-      setOpen(!open)
+      if (open) {
+        setOpen(false)
+      }
     }
 
     document.addEventListener("mousedown", handleOutsideClick)
