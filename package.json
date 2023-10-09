@@ -14,7 +14,7 @@
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o ./docs",
+    "build-storybook": "storybook build -o ./storybook-static",
     "panda": "panda codegen"
   },
   "dependencies": {

@@ -38,7 +38,7 @@ next-env.d.ts
 src/styled-system/*
 
 # build-storybook
-/docs
+/storybook-static
 
 # Editor
 .vscode
