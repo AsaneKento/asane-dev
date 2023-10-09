@@ -4,6 +4,8 @@ import { css } from "~/styled-system/css"
 import type { Metadata } from "next"
 import "./globals.css"
 
+export const runtime = "edge"
+
 export const metadata: Metadata = {
   title: "Asane",
   description: "Asane's Personal Web",
