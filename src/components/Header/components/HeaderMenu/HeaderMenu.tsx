@@ -29,7 +29,11 @@ export function HeaderMenu(): ReactElement {
         size={"large"}
         onClick={handleMenuOpen}
       >
-        {open ? <XMarkIcon /> : <Bars3Icon />}
+        {open ? (
+          <XMarkIcon aria-label={"close-icon"} />
+        ) : (
+          <Bars3Icon aria-label={"open-icon"} />
+        )}
       </IconButton>
       <MenuList open={open}>
         <MenuItem path={"/"}>

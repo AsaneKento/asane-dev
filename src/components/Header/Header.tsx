@@ -1,9 +1,8 @@
 import { type ReactElement } from "react"
 
-import Image from "next/image"
-import Link from "next/link"
 import { css } from "~/styled-system/css"
-import { HeaderMenu } from "./components/Menu"
+import { HeaderMenu } from "./components/HeaderMenu"
+import { Logo } from "./components/Logo"
 
 export function Header(): ReactElement {
   return (
@@ -29,15 +28,7 @@ export function Header(): ReactElement {
           alignItems: "center",
         })}
       >
-        <Link href={"/"}>
-          <Image
-            src={"/site_icon/logo_full.svg"}
-            alt={"logo"}
-            width={100}
-            height={40}
-            className={css({ verticalAlign: "middle" })}
-          />
-        </Link>
+        <Logo />
         <HeaderMenu />
       </div>
     </header>
