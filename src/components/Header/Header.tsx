@@ -1,5 +1,7 @@
 import { type ReactElement } from "react"
 
+import Image from "next/image"
+import Link from "next/link"
 import { css } from "~/styled-system/css"
 import { HeaderMenu } from "./components/Menu"
 
@@ -27,15 +29,15 @@ export function Header(): ReactElement {
           alignItems: "center",
         })}
       >
-        <p
-          className={css({
-            fontSize: "2xl",
-            fontWeight: "extrabold",
-            md: { fontSize: "3xl" },
-          })}
-        >
-          Asane
-        </p>
+        <Link href={"/"}>
+          <Image
+            src={"/site_icon/logo_full.svg"}
+            alt={"logo"}
+            width={100}
+            height={40}
+            className={css({ verticalAlign: "middle" })}
+          />
+        </Link>
         <HeaderMenu />
       </div>
     </header>

@@ -36,17 +36,17 @@ export function HeaderMenu(): ReactElement {
           <HomeIcon />
           Home
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <ArchiveBoxIcon />
-          TimeLine
+          <s>TimeLine</s>
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <CodeBracketIcon />
-          TechBlog
+          <s>TechBlog</s>
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <AtSymbolIcon />
-          Contact
+          <s>Contact</s>
         </MenuItem>
       </MenuList>
     </Menu>
