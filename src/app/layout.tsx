@@ -16,7 +16,15 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang={"ja"}>
-      <body className={css({ maxWidth: "8xl", mx: "auto", py: "8" })}>
+      <body
+        className={css({
+          maxWidth: "8xl",
+          mx: "auto",
+          py: "8",
+          minWidth: "sm",
+          overflow: "auto",
+        })}
+      >
         <Header />
         <main>{children}</main>
       </body>
