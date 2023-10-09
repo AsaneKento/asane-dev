@@ -7,6 +7,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Asane",
   description: "Asane's Personal Web",
+  icons: [{ rel: "icon", url: "/favicon/favicon.ico" }],
 }
 
 export default function RootLayout({

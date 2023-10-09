@@ -29,24 +29,28 @@ export function HeaderMenu(): ReactElement {
         size={"large"}
         onClick={handleMenuOpen}
       >
-        {open ? <XMarkIcon /> : <Bars3Icon />}
+        {open ? (
+          <XMarkIcon aria-label={"close-icon"} />
+        ) : (
+          <Bars3Icon aria-label={"open-icon"} />
+        )}
       </IconButton>
       <MenuList open={open}>
         <MenuItem path={"/"}>
           <HomeIcon />
           Home
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <ArchiveBoxIcon />
-          TimeLine
+          <s>TimeLine</s>
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <CodeBracketIcon />
-          TechBlog
+          <s>TechBlog</s>
         </MenuItem>
-        <MenuItem path={"/"}>
+        <MenuItem path={"#"}>
           <AtSymbolIcon />
-          Contact
+          <s>Contact</s>
         </MenuItem>
       </MenuList>
     </Menu>

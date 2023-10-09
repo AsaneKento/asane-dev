@@ -1,7 +1,8 @@
 import { type ReactElement } from "react"
 
 import { css } from "~/styled-system/css"
-import { HeaderMenu } from "./components/Menu"
+import { HeaderMenu } from "./components/HeaderMenu"
+import { Logo } from "./components/Logo"
 
 export function Header(): ReactElement {
   return (
@@ -27,15 +28,7 @@ export function Header(): ReactElement {
           alignItems: "center",
         })}
       >
-        <p
-          className={css({
-            fontSize: "2xl",
-            fontWeight: "extrabold",
-            md: { fontSize: "3xl" },
-          })}
-        >
-          Asane
-        </p>
+        <Logo />
         <HeaderMenu />
       </div>
     </header>
