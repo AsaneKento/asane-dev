@@ -66,6 +66,10 @@ const iconButtonRecipe = cva({
         w: 10,
         h: 10,
       },
+      xlarge: {
+        w: 16,
+        h: 16,
+      },
     },
   },
   compoundVariants: [
@@ -93,7 +97,7 @@ const iconButtonRecipe = cva({
 
 interface IconButtonProps {
   variant?: "text" | "contained" | "outlined"
-  size?: "medium" | "small" | "large"
+  size?: "medium" | "small" | "large" | "xlarge"
   color?: "primary" | "secondary" | "info" | "success" | "warning" | "error"
   disabled?: boolean
   children: ReactNode
