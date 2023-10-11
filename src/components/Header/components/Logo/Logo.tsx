@@ -7,7 +7,7 @@ export function Logo(): ReactElement {
   return (
     <Link href={"/"}>
       <Image
-        src={"/site_icon/logo_full.svg"}
+        src={"/image/site_icon/logo_full.svg"}
         alt={"logo"}
         width={100}
         height={40}

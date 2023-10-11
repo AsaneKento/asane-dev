@@ -25,7 +25,7 @@ export function Content(): ReactElement {
         <IconButton size={"xlarge"} css={{ backgroundColor: "black" }}>
           <Link href={"https://twitter.com/Asane_Kento"} target={"_blank"}>
             <Image
-              src={"/sns/x.svg"}
+              src={"/image/sns/x.svg"}
               alt={"x-icon"}
               width={100}
               height={100}
@@ -37,7 +37,7 @@ export function Content(): ReactElement {
         <IconButton size={"xlarge"} css={{ backgroundColor: "black" }}>
           <Link href={"https://github.com/AsaneKento"} target={"_blank"}>
             <Image
-              src={"/sns/github.svg"}
+              src={"/image/sns/github.svg"}
               alt={"github-icon"}
               width={100}
               height={100}
@@ -52,7 +52,7 @@ export function Content(): ReactElement {
             target={"_blank"}
           >
             <Image
-              src={"/sns/instagram.svg"}
+              src={"/image/sns/instagram.svg"}
               alt={"instagram-icon"}
               width={100}
               height={100}
