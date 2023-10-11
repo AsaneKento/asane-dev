@@ -19,7 +19,7 @@ export function Profile(): ReactElement {
         })}
       >
         <Image
-          src={"/icon.jpg"}
+          src={"/image/icon.jpg"}
           alt={"profile-img"}
           layout={"fill"}
           objectFit={"cover"}
