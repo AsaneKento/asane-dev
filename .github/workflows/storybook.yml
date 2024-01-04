@@ -25,19 +25,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18.17.1
+          node-version: 20.10.0
           cache: npm
           cache-dependency-path: ./package-lock.json
       - name: Install packages
         run: npm ci && npm run panda
-      - name: Build storybook
-        run: GH_PAGES=true npm run build-storybook
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy To GitHubPages
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
         with:
-          path: "./storybook-static"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          path: storybook-static
