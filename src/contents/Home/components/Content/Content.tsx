@@ -3,6 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { IconButton } from "~/libs/IconButton"
 import { css } from "~/styled-system/css"
+import GitHubImage from "@/image/sns/github.svg"
+import InstagramImage from "@/image/sns/instagram.svg"
+import XImage from "@/image/sns/x.svg"
 
 export function Content(): ReactElement {
   return (
@@ -25,7 +28,7 @@ export function Content(): ReactElement {
         <IconButton size={"xlarge"} css={{ backgroundColor: "black" }}>
           <Link href={"https://twitter.com/Asane_Kento"} target={"_blank"}>
             <Image
-              src={"/image/sns/x.svg"}
+              src={XImage}
               alt={"x-icon"}
               width={100}
               height={100}
@@ -37,7 +40,7 @@ export function Content(): ReactElement {
         <IconButton size={"xlarge"} css={{ backgroundColor: "black" }}>
           <Link href={"https://github.com/AsaneKento"} target={"_blank"}>
             <Image
-              src={"/image/sns/github.svg"}
+              src={GitHubImage}
               alt={"github-icon"}
               width={100}
               height={100}
@@ -52,7 +55,7 @@ export function Content(): ReactElement {
             target={"_blank"}
           >
             <Image
-              src={"/image/sns/instagram.svg"}
+              src={InstagramImage}
               alt={"instagram-icon"}
               width={100}
               height={100}
