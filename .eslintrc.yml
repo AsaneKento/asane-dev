@@ -37,7 +37,7 @@ rules:
   "@typescript-eslint/no-unused-vars": off # no-unused-importsとの二重警告を消す
   import/extensions: # importに拡張子を不要にする
     - warn
-    - never
+    - always
     - js: never
       jsx: never
       ts: never

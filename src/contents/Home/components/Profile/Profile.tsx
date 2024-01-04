@@ -1,6 +1,7 @@
 import type { ReactElement } from "react"
 import Image from "next/image"
 import { css } from "~/styled-system/css"
+import IconImage from "@/image/icon.jpg"
 
 export function Profile(): ReactElement {
   return (
@@ -19,7 +20,7 @@ export function Profile(): ReactElement {
         })}
       >
         <Image
-          src={"/image/icon.jpg"}
+          src={IconImage}
           alt={"profile-img"}
           layout={"fill"}
           objectFit={"cover"}
