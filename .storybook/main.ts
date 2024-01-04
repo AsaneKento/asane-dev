@@ -18,18 +18,6 @@ const config: StorybookConfig = {
   },
   staticDirs: ["../public"],
   webpackFinal(config) {
-    if (process.env.GH_PAGES) {
-      if (config.module?.rules !== undefined) {
-        config.module.rules.push({
-          test: /.svelte$/,
-          loader: "string-replace-loader",
-          options: {
-            search: "/image/",
-            replace: "/asane-dev/image/",
-          },
-        })
-      }
-    }
     if (config.resolve !== undefined) {
       config.resolve.alias = {
         ...config.resolve.alias,
