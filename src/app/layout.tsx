@@ -1,4 +1,5 @@
 import type { ReactElement } from "react"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Header } from "~/components/Header"
 import { css } from "~/styled-system/css"
 import type { Metadata } from "next"
@@ -17,6 +18,9 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang={"ja"}>
+      <head>
+        <GoogleAnalytics gaId={process.env.GA_ID || ""} />
+      </head>
       <body
         className={css({
           maxWidth: "8xl",
