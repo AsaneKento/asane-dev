@@ -21,7 +21,7 @@
     "@heroicons/react": "^2.0.18",
     "@next/third-parties": "^14.0.5-canary.40",
     "@types/node": "20.10.7",
-    "@types/react": "18.2.46",
+    "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "autoprefixer": "10.4.16",
     "eslint": "8.56.0",
