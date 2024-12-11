@@ -1,4 +1,4 @@
-FROM node:20.10.0-slim
+FROM node:20.18.1-slim
 
 WORKDIR /production
 
