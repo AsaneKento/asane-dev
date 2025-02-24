@@ -11,6 +11,7 @@ export default defineConfig({
     include: ["src/**/*.test.{ts,tsx}"],
     coverage: {
       provider: "v8",
+      include: ["src/**/*.{ts,tsx}"],
       reporter: ["text", "html", "json-summary", "json"],
       reportOnFailure: true,
       thresholds: {
