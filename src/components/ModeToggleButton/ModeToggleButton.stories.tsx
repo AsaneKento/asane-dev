@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import { ThemeProvider } from "~/lib/ThemeProvider"
+import { ThemeProvider } from "~/utils/ThemeProvider"
 import { ModeToggleButton } from "./ModeToggleButton"
 import type { Meta, StoryObj } from "@storybook/react"
 

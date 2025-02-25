@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import { ThemeProvider } from "~/lib/ThemeProvider"
+import { ThemeProvider } from "~/utils/ThemeProvider"
 import type { Metadata } from "next"
 import "~/stylesheet/global.css"
 
