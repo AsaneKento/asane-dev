@@ -1,11 +1,6 @@
 import type { ReactElement } from "react"
-import { ModeToggleButton } from "~/components/ModeToggleButton"
+import { Home } from "~/contents/Home"
 
-export default function Home(): ReactElement {
-  return (
-    <main>
-      <p>Hello World</p>
-      <ModeToggleButton />
-    </main>
-  )
+export default function HomePage(): ReactElement {
+  return <Home />
 }
