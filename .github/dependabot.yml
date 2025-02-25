@@ -9,3 +9,18 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      eslint:
+        patterns:
+          - "eslint*"
+      vitest:
+        patterns:
+          - "vitest*"
+          - "@vitest/*"
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+      types:
+        patterns:
+          - "@types/*"
