@@ -13,7 +13,7 @@ export function Header(): ReactElement {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={
-        "sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md"
+        "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       }
     >
       <div
