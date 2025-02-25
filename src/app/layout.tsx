@@ -1,4 +1,5 @@
 import type { ReactElement } from "react"
+import { ThemeProvider } from "~/lib/ThemeProvider"
 import type { Metadata } from "next"
 import "~/stylesheet/global.css"
 
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>): ReactElement {
   return (
-    <html lang={"ja"}>
-      <body>{children}</body>
+    <html lang={"ja"} suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }
