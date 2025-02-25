@@ -1,5 +1,6 @@
 import type { ReactElement } from "react"
 import type { Metadata } from "next"
+import "~/stylesheet/global.css"
 
 export const metadata: Metadata = {
   title: "Create Next App",

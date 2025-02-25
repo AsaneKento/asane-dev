@@ -4,8 +4,9 @@ import type { Meta, StoryObj } from "@storybook/react"
 const meta = {
   title: "Pages/Home/Page",
   component: Home,
-  tags: ["autodocs"],
-  args: {},
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta<typeof Home>
 
 export default meta
