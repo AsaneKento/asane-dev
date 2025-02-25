@@ -4,6 +4,7 @@ import { FlatCompat } from "@eslint/eslintrc"
 import importPlugin from "eslint-plugin-import"
 import unusedImportsPlugin from "eslint-plugin-unused-imports"
 import tsParser from "@typescript-eslint/parser"
+import tailwindCSSPlugin from "eslint-plugin-tailwindcss"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -78,6 +79,11 @@ const eslintConfig = [
       // ],
       "unused-imports/no-unused-imports": "error",
       "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
+  {
+    plugins: {
+      tailwindcss: tailwindCSSPlugin,
     },
   },
   {

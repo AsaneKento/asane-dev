@@ -9,5 +9,6 @@ describe("トップページの描画", () => {
     render(<Default />)
 
     expect(screen.getByText("Hello World")).toBeInTheDocument()
+    expect(screen.getByLabelText("mode-toggle-button")).toBeInTheDocument()
   })
 })
