@@ -3,7 +3,7 @@
 import type { ReactElement } from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-import { Button } from "~/components/ui/button"
+import { Button } from "~/lib/ui/button"
 
 export function ModeToggleButton(): ReactElement {
   const { theme, setTheme } = useTheme()
