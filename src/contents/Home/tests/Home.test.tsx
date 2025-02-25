@@ -8,6 +8,15 @@ describe("トップページの描画", () => {
   it("描画が正しくされていること", async () => {
     render(<Default />)
 
-    expect(screen.getByText("Hello World")).toBeInTheDocument()
+    expect(screen.getByLabelText("contents")).toBeInTheDocument()
+  })
+
+  it("コンテンツの表示が正常にできていること", async () => {
+    render(<Default />)
+
+    expect(screen.getByText("Technical Deep Dives")).toBeInTheDocument()
+    expect(screen.getByText("Best Practices")).toBeInTheDocument()
+    expect(screen.getByText("Tutorials")).toBeInTheDocument()
+    expect(screen.getByText("Tech News")).toBeInTheDocument()
   })
 })
