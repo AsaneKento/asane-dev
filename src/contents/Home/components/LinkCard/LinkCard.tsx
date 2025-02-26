@@ -12,7 +12,9 @@ export function LinkCard({ title, link, icon }: LinkCardProps): ReactElement {
   return (
     <Link href={link}>
       <Card
-        className={"p-8 neumorphic hover:scale-105 transition-all duration-300"}
+        className={
+          "p-8 neumorphic neumorphic-animate hover:scale-105 transition-all duration-300"
+        }
       >
         <div className={"flex flex-col items-center text-center"}>
           {icon}

@@ -13,7 +13,7 @@ export function IconButton({
     <Button
       variant={"ghost"}
       size={"icon"}
-      className={"neumorphic w-10 h-10 p-0"}
+      className={"neumorphic neumorphic-animate w-10 h-10 p-0"}
       {...props}
     >
       {children}

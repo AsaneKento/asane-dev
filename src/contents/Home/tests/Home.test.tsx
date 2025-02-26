@@ -9,9 +9,13 @@ describe("トップページの描画", () => {
     render(<Default />)
 
     expect(screen.getByLabelText("contents")).toBeInTheDocument()
+    expect(screen.getByText("Contents")).toBeInTheDocument()
+
+    expect(screen.getByLabelText("articles")).toBeInTheDocument()
+    expect(screen.getByText("Featured Articles")).toBeInTheDocument()
   })
 
-  it("コンテンツの表示が正常にできていること", async () => {
+  it("Contentsの表示が正常にできていること", async () => {
     render(<Default />)
 
     expect(screen.getByText("Technical Deep Dives")).toBeInTheDocument()
