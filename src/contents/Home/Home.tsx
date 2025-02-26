@@ -1,44 +1,56 @@
 import type { ReactElement } from "react"
 import { BookOpen, Code2, Lightbulb, Newspaper } from "lucide-react"
 import * as motion from "motion/react-client"
+import { ArticleCard } from "~/Components/ArticleCard"
 import { LinkCard } from "~/contents/Home/components/LinkCard"
+import { Articles } from "~/tests/data/articles"
 
 export function Home(): ReactElement {
   return (
-    <main
-      aria-label={"contents"}
-      className={"min-h-screen bg-background py-16 px-8 sm:px-6 lg:px-12"}
-    >
+    <main className={"min-h-screen bg-background py-16 px-8 sm:px-6 lg:px-12"}>
       <motion.div
         initial={"initial"}
         animate={"animate"}
         variants={stagger}
         className={"max-w-7xl mx-auto space-y-16"}
       >
-        <motion.div
-          variants={fadeInUp}
-          className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"}
-        >
-          <LinkCard
-            title={"Technical Deep Dives"}
-            link={"/"}
-            icon={<Code2 className={"h-8 w-8"} />}
-          />
-          <LinkCard
-            title={"Best Practices"}
-            link={"/"}
-            icon={<Lightbulb className={"h-8 w-8"} />}
-          />
-          <LinkCard
-            title={"Tutorials"}
-            link={"/"}
-            icon={<BookOpen className={"h-8 w-8"} />}
-          />
-          <LinkCard
-            title={"Tech News"}
-            link={"/"}
-            icon={<Newspaper className={"h-8 w-8"} />}
-          />
+        <motion.div aria-label={"contents"} variants={fadeInUp}>
+          <h2 className={"text-3xl font-bold mb-8"}>Contents</h2>
+          <div
+            className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"}
+          >
+            <LinkCard
+              title={"Technical Deep Dives"}
+              link={"/"}
+              icon={<Code2 className={"h-8 w-8"} />}
+            />
+            <LinkCard
+              title={"Best Practices"}
+              link={"/"}
+              icon={<Lightbulb className={"h-8 w-8"} />}
+            />
+            <LinkCard
+              title={"Tutorials"}
+              link={"/"}
+              icon={<BookOpen className={"h-8 w-8"} />}
+            />
+            <LinkCard
+              title={"Tech News"}
+              link={"/"}
+              icon={<Newspaper className={"h-8 w-8"} />}
+            />
+          </div>
+        </motion.div>
+
+        <motion.div aria-label={"articles"} variants={fadeInUp}>
+          <h2 className={"text-3xl font-bold mb-8"}>Featured Articles</h2>
+          <div
+            className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"}
+          >
+            {Articles.map((article, index) => (
+              <ArticleCard key={index} article={article} />
+            ))}
+          </div>
         </motion.div>
       </motion.div>
     </main>

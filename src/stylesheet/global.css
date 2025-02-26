@@ -82,6 +82,7 @@
 }
 
 .neumorphic {
+  border-width: 1px;
   box-shadow:
     8px 8px 8px rgba(163, 177, 198, 0.7),
     -4px -4px 8px rgba(255, 255, 255, 0.9),
@@ -90,7 +91,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.neumorphic:hover {
+.neumorphic-animate:hover {
   box-shadow:
     8px 8px 16px rgba(163, 177, 198, 0.4),
     -8px -8px 16px rgba(255, 255, 255, 0.6),
@@ -99,7 +100,7 @@
   transform: translateY(-2px);
 }
 
-.neumorphic-inset {
+.neumorphic-inset-animate:hover {
   box-shadow:
     inset 8px 8px 16px rgba(163, 177, 198, 0.6),
     inset -8px -8px 16px rgba(255, 255, 255, 0.8);
@@ -107,6 +108,7 @@
 }
 
 .dark .neumorphic {
+  border-width: 1px;
   box-shadow:
     8px 8px 8px rgba(0, 0, 0, 0.8),
     -4px -4px 16px rgba(255, 255, 255, 0.03),
@@ -115,7 +117,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.dark .neumorphic:hover {
+.dark .neumorphic-animate:hover {
   box-shadow:
     8px 8px 16px rgba(0, 0, 0, 0.3),
     -8px -8px 16px rgba(255, 255, 255, 0.02),
@@ -123,8 +125,9 @@
     inset -4px -4px 4px rgba(255, 255, 255, 0.03);
 }
 
-.dark .neumorphic-inset {
+.dark .neumorphic-inset-animate:hover {
   box-shadow:
     inset 8px 8px 16px rgba(0, 0, 0, 0.5),
     inset -8px -8px 16px rgba(255, 255, 255, 0.02);
+  transform: translateY(0);
 }
