@@ -9,6 +9,7 @@ describe("レイアウトの描画", () => {
     render(<Default />)
 
     expect(screen.getByLabelText("header")).toBeInTheDocument()
-    expect(screen.getByText("Contents")).toBeInTheDocument()
+    expect(screen.getByText("メインコンテンツ描画エリア")).toBeInTheDocument()
+    expect(screen.getByLabelText("footer")).toBeInTheDocument()
   })
 })

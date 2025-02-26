@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  default:
+    desc: show commands
+    cmds:
+      - task -l --sort none
+
+  format:
+    desc: format & lint:fix
+    cmds:
+      - npm run format
+      - npm run lint:fix
+
+  coverage:
+    desc: test coverage
+    cmds:
+      - npm run test:coverage
