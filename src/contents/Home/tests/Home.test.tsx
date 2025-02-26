@@ -18,9 +18,10 @@ describe("トップページの描画", () => {
   it("Contentsの表示が正常にできていること", async () => {
     render(<Default />)
 
-    expect(screen.getByText("Technical Deep Dives")).toBeInTheDocument()
-    expect(screen.getByText("Best Practices")).toBeInTheDocument()
-    expect(screen.getByText("Tutorials")).toBeInTheDocument()
-    expect(screen.getByText("Tech News")).toBeInTheDocument()
+    expect(screen.getByText("About")).toBeInTheDocument()
+    expect(screen.getByRole("link", { name: "About" })).toHaveAttribute(
+      "href",
+      "/about",
+    )
   })
 })
