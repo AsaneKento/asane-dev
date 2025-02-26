@@ -4,7 +4,7 @@ import { ModeToggleButton } from "./ModeToggleButton"
 import type { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
-  title: "Contents/Layout/Components/ModeToggleButton",
+  title: "Contents/Layout/Feature/Header/ModeToggleButton",
   component: ModeToggleButton,
   parameters: {
     layout: "centered",

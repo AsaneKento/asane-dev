@@ -15,8 +15,7 @@ export default defineConfig({
       reporter: ["text", "html", "json-summary", "json"],
       reportOnFailure: true,
       thresholds: {
-        // TODO; 閾値を80に変更したい
-        statements: 60,
+        statements: 80,
       },
     },
   },
