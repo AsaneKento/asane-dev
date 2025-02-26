@@ -23,6 +23,7 @@ const ignorePatterns = [
   "**/__fixtures__/**",
   "**/__generated__/**",
   "**/__generated_next__/**",
+  "src/lib/ui/**",
 ]
 
 const eslintConfig = [

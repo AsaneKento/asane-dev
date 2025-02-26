@@ -2,7 +2,7 @@ import { SnsIcons } from "./SnsIcons"
 import type { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
-  title: "Components/SnsIcons",
+  title: "components/SnsIcons",
   component: SnsIcons,
   parameters: {
     layout: "centered",
