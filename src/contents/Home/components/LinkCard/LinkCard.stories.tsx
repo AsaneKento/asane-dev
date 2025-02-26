@@ -3,7 +3,7 @@ import { LinkCard } from "./LinkCard"
 import type { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
-  title: "Contents/Home/Components/LinkCard",
+  title: "Contents/Home/components/LinkCard",
   component: LinkCard,
   parameters: {
     layout: "centered",

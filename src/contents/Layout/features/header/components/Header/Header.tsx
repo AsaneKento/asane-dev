@@ -1,8 +1,7 @@
 import type { ReactElement } from "react"
-import { Menu } from "lucide-react"
 import * as motion from "motion/react-client"
 import Link from "next/link"
-import { IconButton } from "~/lib/components/IconButton"
+import { Menu } from "../../../menu"
 import { ModeToggleButton } from "../ModeToggleButton"
 
 export function Header(): ReactElement {
@@ -32,9 +31,7 @@ export function Header(): ReactElement {
           }
         >
           <ModeToggleButton />
-          <IconButton aria-label={"menu-button"}>
-            <Menu className={"h-4 w-4"} />
-          </IconButton>
+          <Menu />
         </div>
       </div>
     </motion.header>
