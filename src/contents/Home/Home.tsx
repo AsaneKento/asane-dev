@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import { BookOpen, Code2, Lightbulb, Newspaper } from "lucide-react"
+import { User } from "lucide-react"
 import * as motion from "motion/react-client"
 import { ArticleCard } from "~/Components/ArticleCard"
 import { LinkCard } from "~/contents/Home/components/LinkCard"
@@ -19,25 +19,11 @@ export function Home(): ReactElement {
           <div
             className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"}
           >
+            {/* TODO: 他ページのリンク追加 */}
             <LinkCard
-              title={"Technical Deep Dives"}
-              link={"/"}
-              icon={<Code2 className={"h-8 w-8"} />}
-            />
-            <LinkCard
-              title={"Best Practices"}
-              link={"/"}
-              icon={<Lightbulb className={"h-8 w-8"} />}
-            />
-            <LinkCard
-              title={"Tutorials"}
-              link={"/"}
-              icon={<BookOpen className={"h-8 w-8"} />}
-            />
-            <LinkCard
-              title={"Tech News"}
-              link={"/"}
-              icon={<Newspaper className={"h-8 w-8"} />}
+              title={"About"}
+              link={"/about"}
+              icon={<User className={"h-8 w-8"} />}
             />
           </div>
         </motion.div>

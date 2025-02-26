@@ -28,7 +28,7 @@ export function Footer(): ReactElement {
                 <LinkButton link={"/"}>Home</LinkButton>
               </li>
               <li>
-                <LinkButton link={"/"}>Profile</LinkButton>
+                <LinkButton link={"/about"}>About</LinkButton>
               </li>
             </ul>
           </Section>

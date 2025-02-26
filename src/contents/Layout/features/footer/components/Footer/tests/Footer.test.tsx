@@ -27,9 +27,9 @@ describe("フッターの描画", () => {
       "href",
       "/",
     )
-    expect(screen.getByRole("link", { name: "Profile" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "About" })).toHaveAttribute(
       "href",
-      "/",
+      "/about",
     )
   })
 })
