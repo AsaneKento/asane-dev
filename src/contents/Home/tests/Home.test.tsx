@@ -12,7 +12,8 @@ describe("トップページの描画", () => {
     expect(screen.getByText("Contents")).toBeInTheDocument()
 
     expect(screen.getByLabelText("articles")).toBeInTheDocument()
-    expect(screen.getByText("Featured Articles")).toBeInTheDocument()
+    expect(screen.getByText("Tech Blog")).toBeInTheDocument()
+    expect(screen.getByText("Coming Soon...")).toBeInTheDocument()
   })
 
   it("Contentsの表示が正常にできていること", async () => {

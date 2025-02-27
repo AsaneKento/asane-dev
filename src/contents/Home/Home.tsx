@@ -1,11 +1,10 @@
 import type { ReactElement } from "react"
 import { User } from "lucide-react"
 import * as motion from "motion/react-client"
-import { ArticleCard } from "~/Components/ArticleCard"
 import { LinkCard } from "~/contents/Home/components/LinkCard"
 import { MainContainer } from "~/lib/components/MainContainer"
 import { fadeInUp, stagger } from "~/lib/motions"
-import { Articles } from "~/tests/data/articles"
+import { Card } from "~/lib/ui/card"
 
 export function Home(): ReactElement {
   return (
@@ -31,14 +30,18 @@ export function Home(): ReactElement {
         </motion.div>
 
         <motion.div aria-label={"articles"} variants={fadeInUp}>
-          <h2 className={"text-3xl font-bold mb-8"}>Featured Articles</h2>
-          <div
-            className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"}
-          >
-            {Articles.map((article, index) => (
-              <ArticleCard key={index} article={article} />
-            ))}
-          </div>
+          <h2 className={"text-3xl font-bold mb-8"}>Tech Blog</h2>
+          <Card className={"p-12 neumorphic"}>
+            <p className={"text-2xl"}>Coming Soon...</p>
+          </Card>
+          {/* TODO: コンテンツを作成後利用する */}
+          {/*<div*/}
+          {/*  className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"}*/}
+          {/*>*/}
+          {/*  {Articles.map((article, index) => (*/}
+          {/*    <ArticleCard key={index} article={article} />*/}
+          {/*  ))}*/}
+          {/*</div>*/}
         </motion.div>
       </motion.div>
     </MainContainer>
