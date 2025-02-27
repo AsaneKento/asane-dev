@@ -1,5 +1,6 @@
 import type { ReactElement } from "react"
 import Link from "next/link"
+import { Chip } from "~/lib/components/Chip"
 import { Button } from "~/lib/ui/button"
 import { Card } from "~/lib/ui/card"
 import type { ArticleType } from "~/tests/factories/article"
@@ -16,13 +17,7 @@ export function ArticleCard({ article }: ArticleCardProps): ReactElement {
       >
         <div className={"flex flex-col h-full"}>
           <div className={"flex justify-between items-center mb-4"}>
-            <span
-              className={
-                "text-sm text-primary font-medium px-3 py-1 rounded-full bg-primary/10 neumorphic"
-              }
-            >
-              {article.category}
-            </span>
+            <Chip title={article.category} />
             <span className={"text-sm text-muted-foreground"}>
               {article.date}
             </span>
