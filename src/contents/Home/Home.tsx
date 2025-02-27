@@ -3,11 +3,13 @@ import { User } from "lucide-react"
 import * as motion from "motion/react-client"
 import { ArticleCard } from "~/Components/ArticleCard"
 import { LinkCard } from "~/contents/Home/components/LinkCard"
+import { MainContainer } from "~/lib/components/MainContainer"
+import { fadeInUp, stagger } from "~/lib/motions"
 import { Articles } from "~/tests/data/articles"
 
 export function Home(): ReactElement {
   return (
-    <main className={"min-h-screen bg-background py-16 px-8 sm:px-6 lg:px-12"}>
+    <MainContainer>
       <motion.div
         initial={"initial"}
         animate={"animate"}
@@ -39,20 +41,6 @@ export function Home(): ReactElement {
           </div>
         </motion.div>
       </motion.div>
-    </main>
+    </MainContainer>
   )
-}
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
 }

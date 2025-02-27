@@ -1,13 +1,13 @@
 import { composeStories } from "@storybook/react"
 import { render, screen } from "@testing-library/react"
-import * as stories from "../IconButton.stories"
+import * as stories from "../Chip.stories"
 
 const { Default } = composeStories(stories)
 
-describe("ボタンの描画", () => {
+describe("チップの描画", () => {
   it("正しく表示されてること", async () => {
     render(<Default />)
 
-    expect(screen.getByRole("button", { name: "btn" })).toBeInTheDocument()
+    expect(screen.getByText("Chip")).toBeInTheDocument()
   })
 })
