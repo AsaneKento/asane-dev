@@ -39,7 +39,7 @@
     "@chromatic-com/storybook": "3.2.5",
     "@cloudflare/next-on-pages": "1.13.8",
     "@eslint/eslintrc": "3",
-    "@faker-js/faker": "9.5.0",
+    "@faker-js/faker": "9.5.1",
     "@storybook/addon-actions": "^8.6.3",
     "@storybook/addon-essentials": "8.6.3",
     "@storybook/addon-interactions": "8.6.3",
