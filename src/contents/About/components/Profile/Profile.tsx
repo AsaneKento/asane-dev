@@ -4,6 +4,7 @@ import * as motion from "motion/react-client"
 import Image from "next/image"
 import { fadeInUp } from "~/lib/motions"
 import { Card } from "~/lib/ui/card"
+import profileImage from "@/asane.jpg"
 
 export function Profile(): ReactElement {
   return (
@@ -16,7 +17,7 @@ export function Profile(): ReactElement {
             }
           >
             <Image
-              src={"/icon.jpg"}
+              src={profileImage}
               alt={"Profile"}
               width={300}
               height={300}
