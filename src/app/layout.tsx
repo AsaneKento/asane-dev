@@ -1,4 +1,5 @@
 import type { ReactElement, ReactNode } from "react"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Inter } from "next/font/google"
 import { Layout } from "~/contents/Layout"
 import type { Metadata } from "next"
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Layout>{children}</Layout>
       </body>
+      <GoogleAnalytics gaId={process.env.GA_ID ?? ""} />
     </html>
   )
 }
