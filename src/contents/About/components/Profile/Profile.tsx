@@ -28,7 +28,7 @@ export function Profile(): ReactElement {
               <h1 className={"text-3xl font-bold"}>Asane Kento</h1>
               <p className={"text-muted-foreground"}>Web Engineer.</p>
             </div>
-            <div className={"space-y-2"}>
+            <div aria-label={"profile-description"} className={"space-y-2"}>
               <p>某広告会社で社内システムの開発を行なっています</p>
               <p>お酒を飲みつつコーディングをするのが趣味</p>
             </div>

@@ -1,11 +1,11 @@
 import type { ReactElement } from "react"
 import * as motion from "motion/react-client"
 import { SnsIcons } from "~/Components/SnsIcons"
-import { Profile } from "~/contents/About/feature/profile"
-import { Chip } from "~/lib/components/Chip"
 import { MainContainer } from "~/lib/components/MainContainer"
 import { fadeInUp, stagger } from "~/lib/motions"
 import { Card } from "~/lib/ui/card"
+import { Profile } from "./components/Profile"
+import { SectionCard } from "./components/SectionCard"
 
 export function About(): ReactElement {
   return (
@@ -19,24 +19,12 @@ export function About(): ReactElement {
         <Profile />
         <motion.div aria-label={"articles"} variants={fadeInUp}>
           <div className={"grid grid-cols-1 md:grid-cols-2 gap-8"}>
-            <Card className={"p-6 neumorphic md:col-span-2"}>
-              <h2 className={"text-xl font-semibold mb-4"}>Expertise</h2>
-              <div className={"flex flex-wrap gap-3"}>
-                {Expertise.map((skill) => (
-                  <Chip key={skill} title={skill} />
-                ))}
-              </div>
-            </Card>
-
-            <Card className={"p-6 neumorphic"}>
-              <h2 className={"text-xl font-semibold mb-4"}>Hobbies</h2>
-              <div className={"flex flex-wrap gap-3"}>
-                {Hobbies.map((hobby) => (
-                  <Chip key={hobby} title={hobby} />
-                ))}
-              </div>
-            </Card>
-
+            <SectionCard
+              className={"md:col-span-2"}
+              title={"Expertise"}
+              items={Expertise}
+            />
+            <SectionCard title={"Hobbies"} items={Hobbies} />
             <Card className={"p-6 neumorphic"}>
               <h2 className={"text-xl font-semibold mb-4"}>Connect</h2>
               <SnsIcons />
