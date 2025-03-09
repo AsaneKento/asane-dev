@@ -7,7 +7,7 @@ import "~/stylesheet/global.css"
 
 export const metadata: Metadata = {
   title: "Asane",
-  description: "Tech Blog",
+  description: "Personal Website & Tech Blog",
 }
 
 interface RootLayoutProps {
