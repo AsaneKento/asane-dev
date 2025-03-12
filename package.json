@@ -79,7 +79,7 @@
     "vercel": "41.3.2",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.0.8",
-    "wrangler": "3.113.0"
+    "wrangler": "3.114.1"
   },
   "eslintConfig": {
     "extends": [
